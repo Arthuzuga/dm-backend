@@ -1,6 +1,6 @@
-import RabbitMQ from './rabbitmq'
-import { Rethinkly, retrieveData, insertData } from './rethinkly'
+// import RabbitMQ from './rabbitmq'
+// import { Rethinkly, retrieveData, insertData } from './rethinkly'
 
-const rethinkly = { instance: Rethinkly(), retrieveData, insertData }
+// const rethinkly = { instance: Rethinkly(), retrieveData, insertData }
 
-export { RabbitMQ, rethinkly }
+// export { RabbitMQ, rethinkly }

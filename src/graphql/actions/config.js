@@ -1,13 +1,13 @@
 import logger from 'hoopa-logger'
-import { rethinkly } from '../../services'
+// import { rethinkly } from '../../services'
 
-const { instance, retrieveData, insertData } = rethinkly
+// const { instance, retrieveData, insertData } = rethinkly
 
 
 export const getConfig = async () => {
   logger.info(`Getting brian current config from Rethink`)
 
-		return retrieveData(await instance, 'config')
+		// return retrieveData(await instance, 'config')
 }
 
 export const updateConfig = async (field, value) => {
