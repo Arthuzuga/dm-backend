@@ -2,13 +2,13 @@
 import { getMonster, listMonsters } from './actions/monsters'
 import { getCampaign, listCampaigns, deleteCampaign, addCampaign } from './actions/campaign'
 import { getSession, addSession, deleteSession, listSessions } from './actions/sessions'
-import { getConfig } from './actions/config'
-import { startInteraction } from './actions/interaction'
+import {getUser, listUsers, registerUser, deleteUser } from './actions/user'
+// import { getConfig } from './actions/config'
+// import { startInteraction } from './actions/interaction'
 
 export default {
 	// Query: { getRole, getConfig, listRoles },
-	Query: { getCampaign, listCampaigns, getSession, listSessions, getMonster, listMonsters},
+	Query: { getCampaign, listCampaigns, getSession, listSessions, getMonster, listMonsters, getUser, listUsers},
 	// Mutation: { startInteraction, createRole },
-	// Mutation: {  createRole },
-	Mutation: {  addCampaign, deleteCampaign, addSession, deleteSession, },
+	Mutation: {  addCampaign, deleteCampaign, addSession, deleteSession,registerUser, deleteUser },
 }

@@ -247,13 +247,24 @@ export default gql`
     ChaoticEvil
   }
 
+  type User {
+    id: String
+    name: String
+    email: String
+    password: String
+    campaigns: [Campaign]
+  }
+
   type StandardReponse {
     executed: Boolean
   }
 
   type Query {
+    getUser(email: String, password: String): User
     getCampaign(id: String): Campaign
     getSession(campaignid: String, sessionId: String): Session
+
+    listUsers: [User]
     listCampaigns: [Campaign]
     listSessions(campaignid: String): [Session]
     getMonster(id: String): Monster
@@ -261,6 +272,8 @@ export default gql`
   }
 
   type Mutation {
+    registerUser(name: String, email: String, password: String): User
+
     addCampaign(
       name: String
       ): Campaign
@@ -269,6 +282,8 @@ export default gql`
       campaignid: String,
       name: String
       ): Session
+    
+    deleteUser(id: String): StandardReponse
 
     deleteCampaign(
       id: String
