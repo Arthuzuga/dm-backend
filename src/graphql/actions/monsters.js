@@ -12,14 +12,3 @@ export const listMonsters = async () => {
   logger.info('List roles from rethink')
   return []
 }
-
-export const addMonster = async (_, { data }) => {
-  logger.info(`Creating role ${JSON.stringify(data)}...`)
-
-  return { executed: true }
-}
-
-export const deleteMonster = async (_, { data }) => {
-
-  return { executed: true }
-}
